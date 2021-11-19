@@ -9,7 +9,12 @@ export default function Listar() {
     return (
         <div className="card">
             <div className="card-body">
-                {dados}
+                {/* {JSON.stringify(dados)} */}
+                <ul>
+                    {[...dados].map((item) => (
+                        <li key={item.id}>{item}</li>
+                    ))}
+                </ul>
             </div>
         </div>
     )
