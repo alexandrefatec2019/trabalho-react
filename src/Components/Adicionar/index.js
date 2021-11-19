@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Context, Blog } from '../../App'
+import { Context } from '../../App'
 
 export default function Adicionar() {
 
@@ -11,8 +11,12 @@ export default function Adicionar() {
         e.preventDefault();
 
         const data = new FormData(e.target);
-        setDados(...dados, [data]);
-        Blog.
+
+        let titulo = data.get("titulo");
+        let texto = data.get("texto");
+        
+        setDados(...dados[0], { 'titulo': titulo, 'texto': texto });
+
         console.log(data.get('titulo'));
 
 
