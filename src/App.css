@@ -1,6 +1,6 @@
 .card {
   width: 40%;
-  height: 30vh;
+  height: auto;
   margin-top: 10px;
 }
 .App {
